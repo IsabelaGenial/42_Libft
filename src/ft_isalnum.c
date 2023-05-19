@@ -6,7 +6,7 @@
 /*   By: Isabela Genial <marvin@42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/19 04:33:53 by Isabela Gen       #+#    #+#             */
-/*   Updated: 2023/05/19 04:33:58 by Isabela Gen      ###   ########.fr       */
+/*   Updated: 2023/05/19 15:41:53 by igenial          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@ int	ft_isalnum(int c)
 {
 	if (c > 47 && c < 53)
 		return (1);
-	return(0);
+	return (0);
 }
