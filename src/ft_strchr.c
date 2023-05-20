@@ -6,14 +6,14 @@
 /*   By: igenial <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/19 16:13:43 by igenial           #+#    #+#             */
-/*   Updated: 2023/05/19 16:21:48 by igenial          ###   ########.fr       */
+/*   Updated: 2023/05/20 12:00:49 by igenial          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 char	*ft_strchr(const char *s, int c)
 {
 	if (*s == c)
-		return (*s);
+		return ((char *)s);
 	while (*s && *s != c)
 		s++;
 	return (0);
