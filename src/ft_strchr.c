@@ -6,15 +6,24 @@
 /*   By: igenial <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/19 16:13:43 by igenial           #+#    #+#             */
-/*   Updated: 2023/05/20 12:00:49 by igenial          ###   ########.fr       */
+/*   Updated: 2023/05/22 15:41:38 by igenial          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strchr(const char *s, int c)
+#include "libft.h"
+
+char    *ft_strchr(const char *s, int c)
 {
-	if (*s == c)
-		return ((char *)s);
-	while (*s && *s != c)
-		s++;
-	return (0);
+    int    i;
+
+    i = 0;
+    while (s[i] != '\0')
+    {
+        if (s[i] == (unsigned char)c)
+            return ((char *)s + i);
+        i++;
+    }
+    if ((unsigned char)c == '\0')
+        return ((char *)s + i);
+    return (NULL);
 }
