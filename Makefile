@@ -15,7 +15,7 @@ SRCS_MANDATORY	=	ft_isalnum.c	ft_isdigit.c	ft_memset.c	ft_strlen.c	\
 			ft_strlcpy.c 	ft_strrchr.c	ft_strlcat.c	ft_strnstr.c	\
 			ft_memcmp.c	ft_memmove.c	ft_bzero.c	ft_memchr.c	\
 			ft_atoi.c	ft_strdup.c	ft_calloc.c	ft_putchar_fd.c	\
-			ft_putnbr_fd.c
+			ft_putnbr_fd.c	ft_putstr_fd.c	ft_putendl_fd.c	ft_itoa.c
 SRCS_BONUS	=	ft_lstnew_bonus.c	ft_lstadd_front_bonus.c	\
 			ft_lstsize_bonus.c	ft_lstlast_bonus.c	\
 			ft_lstadd_back_bonus.c	ft_lstdelone_bonus.c	\
