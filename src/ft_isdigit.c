@@ -6,11 +6,11 @@
 /*   By: Isabela Genial <marvin@42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/19 04:34:24 by Isabela Gen       #+#    #+#             */
-/*   Updated: 2023/05/22 14:53:13 by igenial          ###   ########.fr       */
+/*   Updated: 2023/05/27 19:16:52 by igenial          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int     ft_isdigit(int c)
+int	ft_isdigit(int c)
 {
 	if (c >= 48 && c <= 57)
 		return (1);
