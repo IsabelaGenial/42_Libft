@@ -6,7 +6,7 @@
 /*   By: igenial <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/27 23:53:02 by igenial           #+#    #+#             */
-/*   Updated: 2023/05/29 11:13:54 by igenial          ###   ########.fr       */
+/*   Updated: 2023/05/29 14:30:08 by igenial          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ static void	ft_insertchr(char **big, char *s, char c, size_t biglen)
 		big[j++] = ft_delimiter(&s[i], c);
 		while (s[i] != c && s[i] != '\0')
 			i++;
-		while (s[i] == c)
+		while (s[i] == c && s[i])
 			i++;
 	}
 	free(s);
