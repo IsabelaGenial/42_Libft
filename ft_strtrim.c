@@ -6,7 +6,7 @@
 /*   By: igenial <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/28 04:11:37 by igenial           #+#    #+#             */
-/*   Updated: 2023/05/28 21:14:33 by igenial          ###   ########.fr       */
+/*   Updated: 2023/06/01 17:36:15 by igenial          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,9 @@
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	size_t	i;
 	size_t	len;
 	char	*strmalloc;
 
-	i = 0;
 	while (*s1 && ft_strchr(set, *s1))
 		s1++;
 	if (*s1 == '\0')

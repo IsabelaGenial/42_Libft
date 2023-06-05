@@ -6,7 +6,7 @@
 /*   By: igenial <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/27 23:53:02 by igenial           #+#    #+#             */
-/*   Updated: 2023/05/29 14:30:08 by igenial          ###   ########.fr       */
+/*   Updated: 2023/06/01 13:42:12 by igenial          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ char	**ft_split(char const *s, char c)
 	big = (char **)ft_calloc((biglen + 1), sizeof(char *));
 	if (!big)
 	{
-		free((void *)s);
+		free(big);
 		return (NULL);
 	}
 	ft_insertchr(big, (char *)s, c, biglen);
