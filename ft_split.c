@@ -6,16 +6,16 @@
 /*   By: igenial <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/27 23:53:02 by igenial           #+#    #+#             */
-/*   Updated: 2023/06/01 13:42:12 by igenial          ###   ########.fr       */
+/*   Updated: 2023/06/05 17:53:58 by igenial          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static char		*ft_delimiter(char const *s, char c);
+static char		*ft_littlestr(char const *s, char c);
 static int		ft_biglen( char const *s, char c);
 static int		ft_littlelen(char const *s, char c, size_t a);
-static void		ft_insertchr(char **big, char *s, char c, size_t biglen);
+static void		ft_insertstr(char **big, char *s, char c, size_t biglen);
 
 char	**ft_split(char const *s, char c)
 {
@@ -31,14 +31,14 @@ char	**ft_split(char const *s, char c)
 	big = (char **)ft_calloc((biglen + 1), sizeof(char *));
 	if (!big)
 	{
-		free(big);
+		free((void *)s);
 		return (NULL);
 	}
-	ft_insertchr(big, (char *)s, c, biglen);
+	ft_insertstr(big, (char *)s, c, biglen);
 	return (big);
 }
 
-static void	ft_insertchr(char **big, char *s, char c, size_t biglen)
+static void	ft_insertstr(char **big, char *s, char c, size_t biglen)
 {	
 	size_t	j;
 	size_t	i;
@@ -47,7 +47,7 @@ static void	ft_insertchr(char **big, char *s, char c, size_t biglen)
 	i = 0;
 	while (j < biglen)
 	{
-		big[j++] = ft_delimiter(&s[i], c);
+		big[j++] = ft_littlestr(&s[i], c);
 		while (s[i] != c && s[i] != '\0')
 			i++;
 		while (s[i] == c && s[i])
@@ -56,7 +56,7 @@ static void	ft_insertchr(char **big, char *s, char c, size_t biglen)
 	free(s);
 }
 
-static char	*ft_delimiter(char const *s, char c)
+static char	*ft_littlestr(char const *s, char c)
 {
 	char	*strmalloc;
 	size_t	i;
