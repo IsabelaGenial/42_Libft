@@ -6,7 +6,7 @@
 /*   By: igenial <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/27 23:53:02 by igenial           #+#    #+#             */
-/*   Updated: 2023/06/05 17:53:58 by igenial          ###   ########.fr       */
+/*   Updated: 2023/06/07 20:07:48 by igenial          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,16 +24,10 @@ char	**ft_split(char const *s, char c)
 
 	if (s == NULL)
 		return (NULL);
-	s = ft_strtrim(s, &c);
-	if (s == NULL)
-		return (NULL);
 	biglen = ft_biglen(s, c);
 	big = (char **)ft_calloc((biglen + 1), sizeof(char *));
 	if (!big)
-	{
-		free((void *)s);
 		return (NULL);
-	}
 	ft_insertstr(big, (char *)s, c, biglen);
 	return (big);
 }
@@ -46,14 +40,13 @@ static void	ft_insertstr(char **big, char *s, char c, size_t biglen)
 	j = 0;
 	i = 0;
 	while (j < biglen)
-	{
+	{	
+		while (s[i] == c && s[i])
+			i++;
 		big[j++] = ft_littlestr(&s[i], c);
 		while (s[i] != c && s[i] != '\0')
 			i++;
-		while (s[i] == c && s[i])
-			i++;
 	}
-	free(s);
 }
 
 static char	*ft_littlestr(char const *s, char c)
